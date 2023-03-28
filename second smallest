@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int arr[a];
+    //input array from user
+    for(int i=0; i<a; ++i){
+        scanf("%d",&arr[i]);
+    }
+    //finding the smallest of the array
+    int smallest=arr[0];
+    for(int i=0; i<a; ++i){
+        if(smallest>arr[i]){
+            smallest=arr[i];
+        }
+    }
+    //finding the second smallest of the array
+    //ans used for second smallest
+    int ans=arr[0];
+    for(int i=0; i<a; ++i){
+        if(arr[i]<ans && arr[i]>smallest){
+            ans=arr[i];
+        }
+    }
+    //printing the results
+    printf("Smallest--->> %d\n",smallest);
+    printf("Second smallest--->> %d",ans);
+    
+    return 0;
+}
